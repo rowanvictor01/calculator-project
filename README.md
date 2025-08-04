@@ -16,10 +16,10 @@ A collaborative project on building a web calculator to practice HTML, CSS, Java
 
 ## 📂 Project Structure
 
-mockups/ → HTML/CSS layouts from contributors
-src/components/ → Vue components built from mockups
-public/ → Static files like icons or fonts
-main.js → Vue app entry point
+`mockups/` → HTML/CSS layouts from contributors  
+`src/components/` → Vue components built from mockups  
+`public/` → Static files like icons or fonts  
+`main.js` → Vue app entry point  
 
 ---
 

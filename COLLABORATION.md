@@ -26,11 +26,12 @@ This is the branch for the **HTML and CSS** files where you'll be working on.
 
 ```bash
 git checkout mockups
+cd mockups
 ```
 
 ## ✍️ Step 4: Add Your Mockup Files
 
-Add your HTML and CSS files.
+Add your HTML and CSS files into the mockups/ directory.
 
 ## ✅ Step 5: Commit and Push
 
