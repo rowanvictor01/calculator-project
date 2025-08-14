@@ -1,3 +1,17 @@
+:root{
+    /* Color Palette */
+    --color-dark-blue: hsl(243, 58%, 13%);
+    --color-yellow: hsl(43, 100%, 55%);
+    --color-light-blue: hsl(243, 81%, 60%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray: hsl(0, 0%, 57%);
+    --color-hover-sysmbols: hsl(0, 0%, 75%); 
+    --color-hover-number: hsl(0, 2%, 84%);
+    --color-hover-operator: hsl(43, 81%, 50%);
+
+    --space-20px: calc(1rem + 4px);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -5,40 +19,78 @@
 }
 
 .container {
-background-color: #F6C878;
-width: 24rem;
-margin: 100px auto;
-height: auto;
+background-color: var(--color-white);
+width: 28.5rem;
+margin: 80px auto;
+border-radius: var(--space-20px);
+box-shadow: 2px 2px 5px var(--color-gray), -2px -2px 5px var(--color-white);
+cursor: pointer;
+box-sizing: border-box;
 }
 
-.container-buttons {
-    background-color: #FCE5B7;
+/* .container #input-box{
+    padding-top:var(--space-20px);
+} */
+
+.container #input{  
+    width: 25.75rem;
+    height: 13.375rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin-top: var(--space-20px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2rem;
+    border-radius: calc(var(--space-20px) + 4px);
+    border: transparent;
+    box-shadow:  inset 0px 0px 10px rgba(0,0,0,0.4);
+    margin: var(--space-20px);
+    overflow: hidden;
+}
+
+.container .container-buttons {
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem;
-    /* padding-bottom: 1rem; */
-    
+    margin: var(--space-20px);
+    gap:  var(--space-20px);
 }
 
-button {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+.container .container-buttons button {
+    font-weight: 100;
     font-size: 2rem;
-    padding: 1rem 1.5rem;
-    margin: 0.5rem;
+    width: 5.42rem;
+    height: 3.75rem;
     border: transparent;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px hsl(0, 1%, 60%);
+    border-radius: var(--space-20px);
+    margin: 0 calc(1rem - 2px) 0 0;
+    box-shadow: 2px 2px 5px var(--color-gray), -2px -2px 5px var(--color-white);
+    box-sizing: border-box;
     cursor: pointer;
 }
 
-
-.container .container-buttons > button:nth-child(1){
-    padding: 1rem 1.4rem;
+.button-numbers:hover{
+    background-color: var(--color-hover-number);
 }
 
-
-.symbol {
-    padding: .9rem;
+.operators{
+    background-color: var(--color-yellow);
 }
+
+.operators:hover{
+    background-color: var(--color-hover-operator);
+}
+
+.sysmbols{
+    background-color: var(--color-gray) ;
+}
+
+.sysmbols:hover {
+    background-color: var(--color-hover-sysmbols);
+}
+
+.fifth-row{
+    margin-bottom: var(--space-20px);
+}
+
 
