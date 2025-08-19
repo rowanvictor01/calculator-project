@@ -6,51 +6,56 @@
     <title>Calculator-Project</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="dark-mode">
     <div class="container">
-      <!-- <input type="text" /> -->
-       <!-- <textarea name="" id=""></textarea> -->
         <div id="input-box">
-          <div id="input" contenteditable="true"></div>
+          <div id="input" contenteditable="false" readonly></div>
         </div>
-      <div class="container-buttons">
+
+        <div class="icons">
+          <img src="../images/history_60_gray.svg" alt="History Icon" />
+          <img src="../images/backspace_60_gray.svg" alt="Backspace Icon" />
+        </div>
+      
+      <!-- Buttons Container -->
+        <div class="container-buttons">
         <!-- First Row -->
         <div class="first-row">
           <button class="sysmbols">C</button>
           <button class="sysmbols">()</button>
           <button class="sysmbols">%</button>
           <button class="operators">/</button>
-        </div>
+        <!-- </div> -->
 
         <!-- Second Row -->
         <div class="second-row">
-          <button class="button-numbers">7</button>
-          <button class="button-numbers">8</button>
-          <button class="button-numbers">9</button>
+          <button class="numeric-buttons">7</button>
+          <button class="numeric-buttons">8</button>
+          <button class="numeric-buttons">9</button>
           <button class="operators">x</button>
         </div>
 
         <!-- Third Row -->
         <div class="third-row">
-          <button class="button-numbers">4</button>
-          <button class="button-numbers">5</button>
-          <button class="button-numbers">6</button>
+          <button class="numeric-buttons">4</button>
+          <button class="numeric-buttons">5</button>
+          <button class="numeric-buttons">6</button>
           <button class="operators">-</button>
         </div>
 
         <!-- Fourth Row -->
         <div class="fourth-row">
-          <button class="button-numbers">1</button>
-          <button class="button-numbers">2</button>
-          <button class="button-numbers">3</button>
+          <button class="numeric-buttons">1</button>
+          <button class="numeric-buttons">2</button>
+          <button class="numeric-buttons">3</button>
           <button class="operators">+</button>
         </div>
 
         <!-- Fifth Row -->
         <div class="fifth-row">
-          <button class="symbol">+/-</button>
-          <button class="button-numbers">0</button>
-          <button class="button-numbers">.</button>
+          <button class="numeric-buttons">+/-</button>
+          <button class="numeric-buttons">0</button>
+          <button class="numeric-buttons">.</button>
           <button class="operators">=</button>
         </div>
       </div>

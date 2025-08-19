@@ -1,96 +1,112 @@
-:root{
-    /* Color Palette */
-    --color-dark-blue: hsl(243, 58%, 13%);
-    --color-yellow: hsl(43, 100%, 55%);
-    --color-light-blue: hsl(243, 81%, 60%);
-    --color-white: hsl(0, 0%, 100%);
-    --color-gray: hsl(0, 0%, 57%);
-    --color-hover-sysmbols: hsl(0, 0%, 75%); 
-    --color-hover-number: hsl(0, 2%, 84%);
-    --color-hover-operator: hsl(43, 81%, 50%);
-
-    --space-20px: calc(1rem + 4px);
+:root {
+  /* Color Palette */
+  --color-operator-buttons: hsl(43, 100%, 55%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsla(0, 0%, 59%, 0.5);
+  --color-hover-sysmbols: hsl(0, 1%, 53%);
+  --color-hover-numeric: hsl(0, 2%, 84%, 0.5);
+  --color-hover-operator: hsl(43, 81%, 50%);
+  --font-color-numeric: hsl(0, 0%, 10%);
+  --space-20px: calc(1rem + 4px);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  --font-color-numeric: hsl(0, 0%, 100%);
+  --color-container: #060607;
+  --background-color: #22252a;
+  --background-color-button: #2e3034;
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 .container {
-background-color: var(--color-white);
-width: 28.5rem;
-margin: 80px auto;
-border-radius: var(--space-20px);
-box-shadow: 2px 2px 5px var(--color-gray), -2px -2px 5px var(--color-white);
-cursor: pointer;
-box-sizing: border-box;
+  background-color: var(--color-container);
+  width: 28.5rem;
+  margin: 80px auto;
+  padding-top: var(--space-20px);
+  border-radius: var(--space-20px);
+  box-shadow: 2px 2px 5px var(--color-gray);
+  cursor: pointer;
+  box-sizing: border-box;
+  color: var(--font-color-operator);
 }
 
-/* .container #input-box{
-    padding-top:var(--space-20px);
-} */
+.container #input {
+  width: 25.75rem;
+  height: 12rem;
+  padding: 0rem 0rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 2rem;
+  border-radius: calc(var(--space-20px) + 4px);
+  border: transparent;
+  box-shadow: inset 0px 0px 10px var(--color-gray);
+  margin: 0 var(--space-20px) var(--space-20px) var(--space-20px);
+  overflow: hidden;
+}
 
-.container #input{  
-    width: 25.75rem;
-    height: 13.375rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    margin-top: var(--space-20px);
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    font-size: 2rem;
-    border-radius: calc(var(--space-20px) + 4px);
-    border: transparent;
-    box-shadow:  inset 0px 0px 10px rgba(0,0,0,0.4);
-    margin: var(--space-20px);
-    overflow: hidden;
+.container .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 calc(var(--space-20px) + 20px) var(--space-20px)
+    calc(var(--space-20px) + 20px);
+  color: var(--color-container);
 }
 
 .container .container-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    margin: var(--space-20px);
-    gap:  var(--space-20px);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container .container-buttons button {
-    font-weight: 100;
-    font-size: 2rem;
-    width: 5.42rem;
-    height: 3.75rem;
-    border: transparent;
-    border-radius: var(--space-20px);
-    margin: 0 calc(1rem - 2px) 0 0;
-    box-shadow: 2px 2px 5px var(--color-gray), -2px -2px 5px var(--color-white);
-    box-sizing: border-box;
-    cursor: pointer;
+  font-weight: 100;
+  font-size: 2rem;
+  width: 5.3rem;
+  height: 3.75rem;
+  border: transparent;
+  border-radius: var(--space-20px);
+  margin: 0 0 var(--space-20px) var(--space-20px);
+  box-shadow: 2px 2px 5px var(--color-gray), -2px -2px 5px var(--color-gray);
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-.button-numbers:hover{
-    background-color: var(--color-hover-number);
+.numeric-buttons {
+  color: var(--font-color-numeric);
+  background-color: var(--background-color-button);
 }
 
-.operators{
-    background-color: var(--color-yellow);
+.numeric-buttons:hover {
+  background-color: var(--color-hover-numeric);
 }
 
-.operators:hover{
-    background-color: var(--color-hover-operator);
+.operators {
+  color: var(--color-white);
+  background-color: var(--color-operator-buttons);
 }
 
-.sysmbols{
-    background-color: var(--color-gray) ;
+.operators:hover {
+  background-color: var(--color-hover-operator);
+}
+
+.sysmbols {
+  background-color: #b0b0b0;
 }
 
 .sysmbols:hover {
-    background-color: var(--color-hover-sysmbols);
+  background-color: var(--color-hover-sysmbols);
 }
 
-.fifth-row{
-    margin-bottom: var(--space-20px);
+.fifth-row {
+  margin-bottom: var(--space-20px);
 }
-
-
